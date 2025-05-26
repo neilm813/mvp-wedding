@@ -1,5 +1,5 @@
 {
-  "name": "tbd-app",
+  "name": "mvp-wedding",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
-    "build:with-tests": "npm run test && next build",
     "prepare": "husky",
     "postinstall": "husky install"
   },
