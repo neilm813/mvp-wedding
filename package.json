@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
-    "prepare": "husky",
-    "postinstall": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "15.2.4",
