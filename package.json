@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
-    "build:with-tests": "npm run test && next build"
+    "build:with-tests": "npm run test && next build",
+    "prepare": "husky",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "next": "15.2.4",
@@ -25,9 +27,22 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
+    "husky": "^9.1.7",
     "jsdom": "^26.1.0",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
+    "pretty-quick": "^4.1.1",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^3.1.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "pretty-quick --staged"
+    ],
+    "*.{json,css,md}": [
+      "pretty-quick --staged"
+    ]
   }
 }
